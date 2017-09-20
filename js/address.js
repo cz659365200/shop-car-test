@@ -64,7 +64,8 @@ new Vue({
 	    },
 	    addAdress :function(item){
 	    	var index = this.addressList.indexOf(this.curAddress);
-	    	this.addreddList.push(item);
+	    	var length = this.addressList.length;
+	    	this.addressList.splice(length,0,item);
 	    	this.alertFlag = false;
 	    }
     }
